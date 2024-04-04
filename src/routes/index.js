@@ -8,7 +8,7 @@ import Signup from "../pages/Signup";
 const Private = ({ Item }) => {
   const { signed } = useAuth();
 
-  return signed > 0 ? <Item /> : <Signin />;
+  return signed > 0 ? <Item /> : <Signin />; // se não estiver logado vai direcionar p tela de login
 };
 
 const RoutesApp = () => {

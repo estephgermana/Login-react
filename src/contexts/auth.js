@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
   const signin = (email, password) => {
     const usersStorage = JSON.parse(localStorage.getItem("users_bd"));
 
-    const hasUser = usersStorage?.filter((user) => user.email === email);
+    const hasUser = usersStorage?.filter((user) => user.email === email); // fitro p saber se existe um email cadastrado
 
     if (hasUser?.length) {
       if (hasUser[0].email === email && hasUser[0].password === password) {
@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }) => {
     const hasUser = usersStorage?.filter((user) => user.email === email);
 
     if (hasUser?.length) {
-      return "Já tem uma conta com esse E-mail";
+      return "E-mail já cadastrado";
     }
 
     let newUser;
